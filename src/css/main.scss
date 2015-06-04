@@ -1,7 +1,146 @@
 @import 'reset';
+@import 'animate';
 
-.squares {
-	width: 30%;
-	padding-bottom: 30%;
-	background-color: red;
+body {
+	background-color: #E4DBBF;	
+	color: #383127;
+	font-family: 'Cuprum', sans-serif;
+	text-align: center;
 }
+
+/*THE HEADER, TIMER, AND LIFE METER.
+Icons use untitled-font-2 and are added to .icon 
+and .hearts*/
+
+.header {
+	width: 100%;
+	font-size: 5em;
+	padding: .25em 0;
+	letter-spacing: .4em;
+} 
+
+.time-bar {
+	color: #383127;
+	position: relative;
+	height: 30px;
+}
+
+.time-bar-ul {
+	color: #383127;
+	list-style: none;
+}
+
+.hearts {
+	position: absolute;
+	top: 0;
+	left:3em;
+	font-family: untitled-font-2;
+}
+
+.time {
+	position: absolute;
+	top: 0;
+	right: 3em;
+}	
+
+/*THE GAME BOARD*/
+
+.game-board {
+	padding: 4em 2em;
+}
+
+.game-board:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tile {
+	width: 16.6%;
+	padding-bottom: 16.6%;
+	font-size: 3em;
+	position: relative;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+}
+
+.checkbox {
+	position: absolute;
+	height: 0;
+	width: 0;
+	opacity: 0;
+}
+
+.card {
+	display: block;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	background-color: #70AB8F;
+	opacity: 0.8;
+	border-radius: .25em;
+
+}
+
+.icon {
+	color: #D11250;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    font-family: untitled-font-2;
+    display: none;
+    
+}
+
+.bug, .bug-pink {
+	font-family: untitled-font-2;
+	color: #D11250;
+}
+
+
+
+/*Styles for index.html
+*/
+
+.start-container {
+	width: 50%;
+	margin: 14em auto;
+}
+
+.page-link {
+	color: inherit;
+}
+
+.page-link a {
+	text-decoration: none;
+	color: #383127;
+	font-size: 2em;
+	letter-spacing: .5em;
+	line-height: 1.5em;
+	font-weight: 900;
+}
+
+
+/*CARD ANIMATION*/
+
+.tile input:checked + .card .icon{
+	display: block;
+}	
+.tile input:checked + .card{
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+	-webkit-animation-name: flip;
+	animation-name: flip;
+	-webkit-animation-duration: .2s;
+    animation-duration: .2s;
+}	
+
+
+
+
+
+
