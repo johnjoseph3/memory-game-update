@@ -12,26 +12,40 @@
 
   <div id="header-container"></div>
   <div class="game-board"> 
- 
+
   </body>
 
 
+  <!-- THE START SCREEN -->
+  <script type="text/html" id="start-page">
+    <div class="start-container animated infinite bounce">
+      <div class="header" id="start-page-header">MEM<span class="bug-pink">j</span>RY
+      </div>
 
-  <!-- THE HEADER AND TIMER --> 
+      <div class="start-link-cont">
+        <div class="page-link"><a href="game-page.html">EASY</a></div>
+        <div class="page-link"><a href="#">HARD</a></div>
+     </div>
+    </div>
+  </script>
+
+
+  <!-- GAME BOARD HEADER AND TIMER --> 
   <script type="text/html" id="gameboard-header">
-  <div class="header">
-    MEM<span class="bug">j</span>RY
-  </div>
-  <div class="time-bar">
-    <ul class="time-bar-ul">
-      <li class="hearts">
-        nnnnnnnnn
-      </li>
-      <li class="time">
-        12:01:02 
-      </li>
-    </ul>
-  </div>  
+    <div class="header">
+      MEM<span class="bug">j
+      </span>RY
+    </div>
+    <div class="time-bar">
+      <ul class="time-bar-ul">
+        <li class="hearts">
+          nnnnnnnnn
+        </li>
+        <li class="time">
+          12:01:02 
+        </li>
+      </ul>
+    </div>  
   </script>
 
   <!-- THE GAME BOARD --> 
@@ -44,14 +58,15 @@
     </label>
   </script>
 
-</html>
-
-
   <script src="js/vendor.js"></script>
-
+  
   <script src="js/app.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/router.js"></script>
+  
   <script src="js/main.js"></script>
+  <script src="js/start-screen.js"></script>
+  
 
   </body>
 </html>

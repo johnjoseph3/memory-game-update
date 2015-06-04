@@ -1,4 +1,4 @@
-$(function() {
+app.router.route('game', function () {
 
 	var easy = 18;
 	var hard = 24;
@@ -14,9 +14,10 @@ $(function() {
 		};
 	};
 
-	boardPopulate(hard);
+	boardPopulate(easy);
+
+});
 
   
 
 
-});

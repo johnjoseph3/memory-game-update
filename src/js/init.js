@@ -1,1 +1,7 @@
-// TODO: put initialization logic here
+$(function () {
+	'use strict';
+
+	Backbone.history.start();
+	
+});
+
