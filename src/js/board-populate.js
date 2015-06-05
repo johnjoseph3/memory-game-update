@@ -25,17 +25,18 @@ app.boardPopulate = function () {
 	  var shuffledArray = shuffleArray(arr);
 	  
 	  
-		while ( i < 18	) {
+		while ( i < 14	) {
 
 			var arrIcon = shuffledArray[0];
 
 			var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span><span></label>'	
 			
-			$('.game-board').append(squareHtml);	
+			$('.game-board').append(squareHtml);		
 
 			shuffledArray.shift();
 
-		i++;
+		i++; 
+
 		};
 
 
