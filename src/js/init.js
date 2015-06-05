@@ -3,7 +3,7 @@ $(function () {
 
 	Backbone.history.start();
 
-	app.boardPopulate();
+	// app.boardPopulate();
 	
 });
 

@@ -1,6 +1,6 @@
-app.boardPopulate = function () {
+app.boardPopulate = function (arr, difficulty) {
 
-	var arr = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
+	// var arr = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
 
 	function shuffleArray(array) {
   	for (var i = array.length - 1; i > 0; i--) {
@@ -16,7 +16,7 @@ app.boardPopulate = function () {
   
   var i = 0;
 
-	while ( i < 18 ) {
+	while ( i < difficulty ) {
 
 		var arrIcon = shuffledArray[0];
 
