@@ -4,7 +4,7 @@ app.router.route('easy', function () {
 
 	$('#header-container').html($('#gameboard-header').html());
 
-	app.boardPopulate(easy);
+	// app.boardPopulate(easy);
 
 
 });
@@ -23,7 +23,3 @@ app.router.route('easy', function () {
 // }
 
 // array = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g'];
-
-// shuffleArray(array);
-
-// console.log(array)
