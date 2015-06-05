@@ -9,5 +9,21 @@ app.router.route('easy', function () {
 	app.boardPopulate(easyArr, easy);
 
 
+// Game logic
+
+	//Start timer
+
+	//on click get el by id 
+
+		//wait for second click
+
+	//on click get second el by id
+	
+	//if a = b {set both to checked}
+
+	//if a !- b {set both to unchecked}	
+
+
+
 });
 

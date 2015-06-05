@@ -1,7 +1,5 @@
 app.boardPopulate = function (arr, difficulty) {
 
-	// var arr = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
-
 	function shuffleArray(array) {
   	for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
@@ -20,7 +18,10 @@ app.boardPopulate = function (arr, difficulty) {
 
 		var arrIcon = shuffledArray[0];
 
-		var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span><span></label>'	
+		var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+		var ranId = randLetter + Date.now();
+
+		var squareHtml = '<label class="tile" id="' + ranId + '"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span><span></label>'	
 		
 		$('.game-board').append(squareHtml);		
 
