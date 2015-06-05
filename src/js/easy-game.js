@@ -8,69 +8,34 @@ app.router.route('easy', function () {
 
 	app.boardPopulate(easyArr, easy);
 
-
-// Game logic
-
 	//Start timer
 
-	var guessArr = [];
-
+	var guessArr = []; //tile content
+	var guessTile = []; //actual tiles
 
 	$('.card').on('click', function () {
-	   var a = this.textContent;
-	   console.log(a);
-	   guessArr.push(a);
-	   console.log(guessArr.length);	 
+	   
+	   var tile = this;
+	   guessTile.push(tile);
+	   
+	   var tileContent = this.textContent;
+	   guessArr.push(tileContent); 
 
 	   if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
-  	    alert('they match');
-  	    guessArr = [];
-	   }	else if (guessArr.length === 2 && guessArr[0] != guessArr[1] ) {
-	  		console.log('they dont match'); 
-	  		guessArr = [];
-	  }	 	
-	   
-	})
-	
-	
-	 
- 	 
-
- // 	 $('.card').on('click', function () {
-	//    var a = this.textContent;
-	//    console.log(a);
-	//    guessArr.push(a);
-	//    console.log(guessArr);	 
-	// })
-	
-	// if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
- //  	    alert('they match');
- //  	    guessArr = [];
-	//    }	else if (guessArr.length === 2 && guessArr[0] != guessArr[1] ) {
-	//   		console.log('they dont match'); 
-	//   		guessArr = [];
-	//   }	 
+  	     console.log('they match');
+  	     guessArr = [];
+	   } else if (guessArr.length === 2 && guessArr[0] != guessArr[1]) {
+	  	   console.log('they dont match'); 
 	  	 
-	  
+	  	 	 app.unflip(guessTile[0], guessTile[1]);
 
+	   		 guessArr = [];
+	   		 guessTile = [];
 
-	// $('.tile').on('click', function () {
-	// 	 b = this;
-	// 	 console.log(b);
-		
-	// })
+	   }  	  	
 
-
-
-		//wait for second click
-
-	//on click get second el by id
-	
-	//if a = b {set both to checked}
-
-	//if a !- b {set both to unchecked}	
-
-
+	})
 
 });
 
+	 

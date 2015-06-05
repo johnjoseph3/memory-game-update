@@ -18,10 +18,7 @@ app.boardPopulate = function (arr, difficulty) {
 
 		var arrIcon = shuffledArray[0];
 
-		// var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-		// var ranId = randLetter + Date.now();
-
-		var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span><span></label>'	
+		var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span></label>'	
 		
 		$('.game-board').append(squareHtml);		
 
