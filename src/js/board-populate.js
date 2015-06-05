@@ -11,8 +11,6 @@ app.boardPopulate = function () {
 
 		var arr = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g'];
 
-		var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">b</span><span></label>'
-		
 
 		function shuffleArray(array) {
     	for (var i = array.length - 1; i > 0; i--) {
@@ -26,15 +24,16 @@ app.boardPopulate = function () {
 
 	  var shuffledArray = shuffleArray(arr);
 	  
-	  var arrIcon = shuffledArray[0];
-
-	  console.log(arrIcon)
-
-
-
+	  
 		while ( i < 18	) {
+
+			var arrIcon = shuffledArray[0];
+
+			var squareHtml = '<label class="tile"><input type="checkbox" class="checkbox"><span class="card animated"><span class="icon">'+ arrIcon +'</span><span></label>'	
 			
-			$('.game-board').append(squareHtml)	
+			$('.game-board').append(squareHtml);	
+
+			shuffledArray.shift();
 
 		i++;
 		};
