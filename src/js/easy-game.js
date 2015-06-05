@@ -13,7 +13,56 @@ app.router.route('easy', function () {
 
 	//Start timer
 
-	//on click get el by id 
+	var guessArr = [];
+
+
+	$('.card').on('click', function () {
+	   var a = this.textContent;
+	   console.log(a);
+	   guessArr.push(a);
+	   console.log(guessArr.length);	 
+
+	   if (guessArr.length === 2 && (guessArr[0] === guessArr[1])) {
+  	    alert('they match');
+  	    guessArr = [];
+	   }	else if (guessArr.length === 2 && guessArr[0] != guessArr[1] ) {
+	  		console.log('they dont match'); 
+	  		guessArr = [];
+	  }	 	
+
+
+	   
+	})
+	
+	
+	 
+ 	 
+
+ // 	 $('.card').on('click', function () {
+	//    var a = this.textContent;
+	//    console.log(a);
+	//    guessArr.push(a);
+	//    console.log(guessArr);	 
+	// })
+	
+	// if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
+ //  	    alert('they match');
+ //  	    guessArr = [];
+	//    }	else if (guessArr.length === 2 && guessArr[0] != guessArr[1] ) {
+	//   		console.log('they dont match'); 
+	//   		guessArr = [];
+	//   }	 
+	  	 
+	  
+
+
+	// $('.tile').on('click', function () {
+	// 	 b = this;
+	// 	 console.log(b);
+		
+	// })
+
+
 
 		//wait for second click
 
