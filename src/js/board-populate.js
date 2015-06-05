@@ -1,4 +1,4 @@
-app.boardPopulate = function (difficulty) {
+app.boardPopulate = function () {
 
 	var i = 0;
 
