@@ -22,15 +22,13 @@ app.router.route('easy', function () {
 	   guessArr.push(a);
 	   console.log(guessArr.length);	 
 
-	   if (guessArr.length === 2 && (guessArr[0] === guessArr[1])) {
+	   if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
   	    alert('they match');
   	    guessArr = [];
 	   }	else if (guessArr.length === 2 && guessArr[0] != guessArr[1] ) {
 	  		console.log('they dont match'); 
 	  		guessArr = [];
 	  }	 	
-
-
 	   
 	})
 	
