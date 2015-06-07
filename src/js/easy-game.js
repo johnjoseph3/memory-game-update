@@ -8,8 +8,6 @@ app.router.route('easy', function () {
 
 	app.boardPopulate(easyArr, easy);
 
-	//Start timer
-
 	app.gamePlay();
 
 

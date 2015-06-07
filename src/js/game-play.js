@@ -7,20 +7,24 @@ app.gamePlay = function () {
    
 	  var tile = this;
 	  guessTile.push(tile);
+	  var firstTile = guessTile[0];
+	  var secondTile = guessTile[1]
 	   
 	  var tileContent = this.textContent;
-	  guessArr.push(tileContent); 
+	  var firstGuess = guessArr[0]; 
+	  var secondGuess = guessArr[1];
+	  guessArr.push(tileContent);
 
-	  if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
+	  if (guessArr.length === 2 && firstGuess === secondGuess) {
 	    console.log('they match');
 
       guessArr = [];
   	  guessTile = [];
 
-	  } else if (guessArr.length === 2 && guessArr[0] != guessArr[1]) {
+	  } else if (guessArr.length === 2 && firstGuess != secondGuess) {
   	  console.log('they dont match'); 
 	  	 
-	  	app.unCheck(guessTile[0], guessTile[1]);
+	  	app.unCheck(firstTile, secondTile);
 
 	  	guessArr = [];
 	    guessTile = [];
