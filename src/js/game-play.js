@@ -5,7 +5,7 @@ app.gamePlay = function () {
 	  
 
 	$('.card').on('click', function () {
-   
+
 	  var tile = this;
 	  guessTile.push(tile);
 	  var firstTile = guessTile[0];
@@ -22,17 +22,23 @@ app.gamePlay = function () {
 	  	 $('.hearts').text(sliceHearts);
 	  };
 
-	  if (guessArr.length === 2 && (guessArr[0] === guessArr[1])) {
+	  if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
 	      console.log('they match');
-
+    
         guessArr = [];
   	    guessTile = [];
 
-	  } else if (guessArr.length === 2 && (guessArr[0] != guessArr[1])) {
+  	    // This is hacky
+  	    if ($('.checkbox:checked').length === ($('input').length - 1)) {
+	      	alert('you win');
+	      	document.location = "#win";
+	      }
+
+	  } else if (guessArr.length === 2 && guessArr[0] != guessArr[1]) {
 	  	  console.log('they dont match'); 
 	  	  removeHeart(); 
 
-	  	  // This is hacky. 
+	  	  // This is hacky
 	  	  if (hearts.length <= 1) {
 	  	  	document.location = '#lost'
 	  	  }
