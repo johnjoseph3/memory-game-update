@@ -11,18 +11,20 @@ app.gamePlay = function () {
 	  var secondTile = guessTile[1]
 	   
 	  var tileContent = this.textContent;
-	  var firstGuess = guessArr[0]; 
-	  var secondGuess = guessArr[1];
 	  guessArr.push(tileContent);
 
-	  if (guessArr.length === 2 && firstGuess === secondGuess) {
+	  if (guessArr.length === 2 && (guessArr[0] === guessArr[1])) {
 	    console.log('they match');
 
       guessArr = [];
   	  guessTile = [];
 
-	  } else if (guessArr.length === 2 && firstGuess != secondGuess) {
-  	  console.log('they dont match'); 
+	  } else if (guessArr.length === 2 && (guessArr[0] != guessArr[1])) {
+	  	  console.log('they dont match'); 
+	  	  var hearts = $('.hearts').text();
+	  	  var sliceHearts = hearts.slice(0, -1);
+	  	  console.log(sliceHearts);
+	  	  $('.hearts').text(sliceHearts);
 	  	 
 	  	app.unCheck(firstTile, secondTile);
 
@@ -30,4 +32,5 @@ app.gamePlay = function () {
 	    guessTile = [];
 	   }  	    		 
 	})
+
 }

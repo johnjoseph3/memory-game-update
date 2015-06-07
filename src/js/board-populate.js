@@ -1,4 +1,4 @@
-app.boardPopulate = function (arr, difficulty, hearts) {
+app.boardPopulate = function (arr, difficulty) {
 
 	function shuffleArray(array) {
   	for (var i = array.length - 1; i > 0; i--) {
@@ -10,17 +10,6 @@ app.boardPopulate = function (arr, difficulty, hearts) {
   		return array;
 	};
   var shuffledArray = shuffleArray(arr);
-
-  // Generates hearts
-
-  var hearts = 
-
-  $('time-bar-ul').append(hearts);
-
-
-
-
-
   
   var i = 0;
 
