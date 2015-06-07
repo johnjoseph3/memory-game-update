@@ -30,7 +30,6 @@ app.gamePlay = function () {
 
   	    // This is hacky
   	    if ($('.checkbox:checked').length === ($('input').length - 1)) {
-	      	alert('you win');
 	      	document.location = "#win";
 	      }
 

@@ -144,6 +144,10 @@ and .hearts*/
 	font-weight: 900;
 }
 
+.page-link a:hover {
+	color: #D11250;
+}
+
 /*CARD ANIMATION*/
 
 .tile input:checked + .card .icon{
@@ -154,8 +158,8 @@ and .hearts*/
 	backface-visibility: visible;
 	-webkit-animation-name: flip;
 	animation-name: flip;
-	-webkit-animation-duration: .2s;
-    animation-duration: .2s;
+	-webkit-animation-duration: 1s;
+    animation-duration: 1s;
 }	
 
 
