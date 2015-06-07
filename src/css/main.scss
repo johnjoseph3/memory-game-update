@@ -11,13 +11,33 @@ body {
 /*THE HEADER, TIMER, AND LIFE METER.
 Icons use untitled-font-2 and are added to .icon 
 and .hearts*/
-
 .header {
 	width: 100%;
-	font-size: 5em;
+	font-size: 4em;
 	padding: .25em 0;
-	letter-spacing: .4em;
+	letter-spacing: 0.1em;
 } 
+
+.header a {
+	text-decoration: none;
+	color: #D11250;
+	background-color: #383127;
+	padding: 0.3em;
+	border-radius: 5%;
+}
+
+.header a:hover {
+	color: #383127;
+	background-color: #D11250;
+}
+
+.msg-page {
+	padding-top: 2em;
+}
+
+.hdr-link {
+	margin-top: 1em;
+}
 
 .time-bar {
 	color: #383127;
@@ -33,7 +53,7 @@ and .hearts*/
 .hearts {
 	position: absolute;
 	top: 0;
-	left:3em;
+	left: 3em;
 	font-family: untitled-font-2;
 }
 
@@ -119,11 +139,10 @@ and .hearts*/
 	text-decoration: none;
 	color: #383127;
 	font-size: 2em;
-	letter-spacing: .5em;
+	letter-spacing: 0.1em;
 	line-height: 1.5em;
 	font-weight: 900;
 }
-
 
 /*CARD ANIMATION*/
 
