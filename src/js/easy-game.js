@@ -4,6 +4,10 @@ app.router.route('easy', function () {
 
 	app.generateHeader('easy');
 
+	var fiveMinutes = 5 * 60;
+	var display = $('.time');
+	app.startTimer(fiveMinutes, display);
+
 	var easyArr = ['a', 'a', 'b', 'b', 'c', 'c','d', 'd', 'e', 'e', 'f', 'f' , 'g', 'g', 'h', 'h', 'i', 'i']
 
 	app.boardPopulate(easyArr, easy);
