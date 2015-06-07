@@ -2,6 +2,7 @@ app.gamePlay = function () {
 			
 		var guessArr = []; //tile content
 	  var guessTile = []; //actual tiles
+	  
 
 	$('.card').on('click', function () {
    
@@ -13,7 +14,7 @@ app.gamePlay = function () {
 	  var tileContent = this.textContent;
 	  guessArr.push(tileContent);
 
-	  var hearts = $('.hearts').text();
+	  var hearts = $('.hearts').text();	  
 	  
 	  var removeHeart = function () {
 	  	var sliceHearts = hearts.slice(0, -1);
@@ -30,11 +31,23 @@ app.gamePlay = function () {
 	  } else if (guessArr.length === 2 && (guessArr[0] != guessArr[1])) {
 	  	  console.log('they dont match'); 
 	  	  removeHeart(); 
+
+	  	  // This is hacky. 
+	  	  if (hearts.length <= 1) {
+	  	  	document.location = '#lost'
+	  	  }
+
 	  	  app.unCheck(firstTile, secondTile);
   
 	  	  guessArr = [];
 	      guessTile = [];
-	   }  	    		 
+	   }  
+
 	})
+  
+
+  
+
+
 
 }
