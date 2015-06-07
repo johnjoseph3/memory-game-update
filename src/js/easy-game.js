@@ -10,31 +10,13 @@ app.router.route('easy', function () {
 
 	//Start timer
 
-	var guessArr = []; //tile content
-	var guessTile = []; //actual tiles
+	app.gamePlay();
 
-	$('.card').on('click', function () {
-	   
-	   var tile = this;
-	   guessTile.push(tile);
-	   
-	   var tileContent = this.textContent;
-	   guessArr.push(tileContent); 
 
-	   if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
-  	     console.log('they match');
-  	     guessArr = [];
-	   } else if (guessArr.length === 2 && guessArr[0] != guessArr[1]) {
-	  	   console.log('they dont match'); 
-	  	 
-	  	 	 app.unflip(guessTile[0], guessTile[1]);
 
-	   		 guessArr = [];
-	   		 guessTile = [];
 
-	   }  	  	
 
-	})
+
 
 });
 

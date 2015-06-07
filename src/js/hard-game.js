@@ -8,6 +8,8 @@ app.router.route('hard', function () {
 
 	app.boardPopulate(hardArr, hard);
 
+	app.gamePlay();
+
 
 });
 

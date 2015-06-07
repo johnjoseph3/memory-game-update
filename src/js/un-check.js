@@ -1,4 +1,4 @@
-app.unflip = function(tile1, tile2) {
+app.unCheck = function(tile1, tile2) {
 	
 	setTimeout(function(){ 
 		
