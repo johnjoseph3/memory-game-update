@@ -1,5 +1,5 @@
 @import 'reset';
-// @import 'animate';
+@import 'animate';
 
 body {
 	background-color: #E4DBBF;	
@@ -92,7 +92,7 @@ and .hearts*/
 	opacity: 0;
 }
 
-.card {
+.card, .card-matched {
 	display: block;
 	position: absolute;
 	top: 1px;
@@ -102,7 +102,6 @@ and .hearts*/
 	background-color: #70AB8F;
 	opacity: 0.8;
 	border-radius: .25em;
-
 }
 
 .icon {
