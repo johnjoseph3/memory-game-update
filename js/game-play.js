@@ -25,7 +25,7 @@ app.gamePlay = function () {
 	  if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
 	      console.log('they match');
     
-	      app.unBind(firstTile, secondTile);
+	      // app.unBind(firstTile, secondTile);
 
         guessArr = [];
   	    guessTile = [];
