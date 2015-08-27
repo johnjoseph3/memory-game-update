@@ -4,12 +4,12 @@ app.gamePlay = function () {
 	  var guessTile = []; //actual tiles
 	  
 
-	$('.card').on('click', function () {
-
+	$('.card').on('click', function (e) {
+		
 	  var tile = this;
 	  guessTile.push(tile);
 	  var firstTile = guessTile[0];
-	  var secondTile = guessTile[1]
+	  var secondTile = guessTile[1];
 	   
 	  var tileContent = this.textContent;
 	  guessArr.push(tileContent);
@@ -17,42 +17,44 @@ app.gamePlay = function () {
 	  var hearts = $('.hearts').text();	  
 	  
 	  var removeHeart = function () {
-	  var sliceHearts = hearts.slice(0, -1);
+	  	var sliceHearts = hearts.slice(0, -1);
 	  	 
-	  	 $('.hearts').text(sliceHearts);
+	  	$('.hearts').text(sliceHearts);
 	  };
 
 	  if (guessArr.length === 2 && guessArr[0] === guessArr[1]) {
-	      console.log('they match');
-    
-	      app.unBind(firstTile, secondTile);
 
-        guessArr = [];
-  	    guessTile = [];
+	    // app.unBind(firstTile, secondTile);
 
-  	    // This is hacky
-  	    if ($('.checkbox:checked').length === ($('input').length - 1)) {
-	      	document.location = "#win";
-	      }
+	    $(firstTile).off();
+	    $(secondTile).off();
 
-	  } else if (guessArr.length === 2 && guessArr[0] != guessArr[1]) {
-	  	  console.log('they dont match'); 
-	  	  removeHeart(); 
 
-	  	  // This is hacky
-	  	  if (hearts.length <= 1) {
-	  	  	document.location = '#lost'
-	  	  }
+	    guessArr = [];
+	    guessTile = [];
 
-	  	  app.unCheck(firstTile, secondTile);
-  
-	  	  guessArr = [];
-	      guessTile = [];
-	   }  
+	    // This is hacky
+	    if ($('.checkbox:checked').length === ($('input').length - 1)) {
+	    	document.location = "#win";
+	    }
+
+			} else if (guessArr.length === 2 && guessArr[0] !== guessArr[1]) {
+				  removeHeart(); 
+
+				  // This is hacky
+				  if (hearts.length <= 1) {
+				  	document.location = '#lost'
+				  }
+
+		  		app.unCheck(firstTile, secondTile);
+
+				  guessArr = [];
+			    guessTile = [];
+	 			}  
 
 	})
   
-
+	
   
 
 

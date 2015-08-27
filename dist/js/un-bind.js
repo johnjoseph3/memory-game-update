@@ -4,7 +4,6 @@ app.unBind = function (tile1, tile2) {
 		
 		$('.card').off('click');
 
-
 	 }, 1000);
 	
 }
